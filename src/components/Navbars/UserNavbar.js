@@ -18,7 +18,7 @@ import {
   Media,
 } from "reactstrap";
 
-class AdminNavbar extends React.Component {
+class UserNavbar extends React.Component {
   render() {
     return (
       <>
@@ -54,7 +54,7 @@ class AdminNavbar extends React.Component {
                     </span>
                     <Media className="ml-2 d-none d-lg-block">
                       <span className="mb-0 text-sm font-weight-bold">
-                        Panuwat Khrai-udom (ADMIN)
+                        Panuwat Khrai-udom (User)
                       </span>
                     </Media>
                   </Media>
@@ -63,33 +63,25 @@ class AdminNavbar extends React.Component {
                   <DropdownItem className="noti-title" header tag="div">
                     <h6 className="text-overflow m-0">Welcome!</h6>
                   </DropdownItem>
-                  <DropdownItem to="/admin/profile" tag={Link}>
+                  <DropdownItem to="/user/profile" tag={Link}>
                     <i className="ni ni-single-02" />
                     <span>My profile</span>
                   </DropdownItem>
-                  <DropdownItem to="/admin/Editprofile" tag={Link}>
+                  <DropdownItem to="/user/Editprofile" tag={Link}>
                     <i className="ni ni-settings-gear-65" />
                     <span>แก้ไขประวัติส่วนตัว</span>
                   </DropdownItem>
-                  <DropdownItem to="/admin/Changpassword" tag={Link}>
+                  <DropdownItem to="/user/Changpassword" tag={Link}>
                     <i className="ni ni-settings-gear-65" />
                     <span>เปลี่ยนรหัสผ่าน</span>
                   </DropdownItem>
-                  <DropdownItem to="/admin/Assignjob" tag={Link}>
-                    <i className="ni ni-box-2" />
-                    <span>Assignjob</span>
-                  </DropdownItem>
-                  <DropdownItem to="/admin/Components" tag={Link}>
+                  <DropdownItem to="/user/Service" tag={Link}>
                     <i className="ni ni-calendar-grid-58" />
-                    <span>Components</span>
+                    <span>แจ้งซ่อม</span>
                   </DropdownItem>
-                  <DropdownItem to="/admin/Authentication" tag={Link}>
+                  <DropdownItem to="/user/History" tag={Link}>
                     <i className="ni ni-calendar-grid-58" />
-                    <span>Authenticatio</span>
-                  </DropdownItem>
-                  <DropdownItem to="/admin/Contacts" tag={Link}>
-                    <i className="ni ni-calendar-grid-58" />
-                    <span>Contacts</span>
+                    <span>History</span>
                   </DropdownItem>
                   {/*<DropdownItem to="/admin/user-profile" tag={Link}>
                     <i className="ni ni-support-16" />
@@ -113,4 +105,4 @@ class AdminNavbar extends React.Component {
   }
 }
 
-export default AdminNavbar;
+export default UserNavbar;
