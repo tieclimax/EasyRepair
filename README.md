@@ -1,5 +1,3 @@
-
-
 ```
 Argon Design System React
 .

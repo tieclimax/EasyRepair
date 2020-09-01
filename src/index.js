@@ -1,4 +1,3 @@
-
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
@@ -13,6 +12,7 @@ import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import Service from "views/examples/Service";
+
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -42,6 +42,7 @@ ReactDOM.render(
         exact
         render={(props) => <Service {...props} />}
       />
+
       <Redirect to="/" />
     </Switch>
   </BrowserRouter>,

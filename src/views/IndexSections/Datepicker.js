@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 // react plugin used to create datetimepicker
 import ReactDatetime from "react-datetime";
@@ -26,7 +9,7 @@ import {
   InputGroupText,
   InputGroup,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 class Datepicker extends React.Component {
@@ -39,7 +22,7 @@ class Datepicker extends React.Component {
     ) {
       this.setState({
         startDate: date,
-        endDate: date
+        endDate: date,
       });
     } else if (
       this.state.endDate &&
@@ -48,11 +31,11 @@ class Datepicker extends React.Component {
     ) {
       this.setState({
         startDate: date,
-        endDate: date
+        endDate: date,
       });
     } else {
       this.setState({
-        [who]: date
+        [who]: date,
       });
     }
   };
@@ -61,7 +44,7 @@ class Datepicker extends React.Component {
   // start-date className which means that this day will only have left border radius
   // end-date className which means that this day will only have right border radius
   // this way, the selected dates will look nice and will only be rounded at the ends
-  getClassNameReactDatetimeDays = date => {
+  getClassNameReactDatetimeDays = (date) => {
     if (this.state.startDate && this.state.endDate) {
     }
     if (
@@ -104,7 +87,7 @@ class Datepicker extends React.Component {
                 </InputGroupAddon>
                 <ReactDatetime
                   inputProps={{
-                    placeholder: "Date Picker Here"
+                    placeholder: "Date Picker Here",
                   }}
                   timeFormat={false}
                 />
@@ -126,11 +109,11 @@ class Datepicker extends React.Component {
                     </InputGroupAddon>
                     <ReactDatetime
                       inputProps={{
-                        placeholder: "Start Date"
+                        placeholder: "Start Date",
                       }}
                       value={this.state.startDate}
                       timeFormat={false}
-                      onChange={e =>
+                      onChange={(e) =>
                         this.handleReactDatetimeChange("startDate", e)
                       }
                       renderDay={(props, currentDate, selectedDate) => {
@@ -158,12 +141,12 @@ class Datepicker extends React.Component {
                     </InputGroupAddon>
                     <ReactDatetime
                       inputProps={{
-                        placeholder: "End Date"
+                        placeholder: "End Date",
                       }}
                       className="rdtPickerOnRight"
                       value={this.state.endDate}
                       timeFormat={false}
-                      onChange={e =>
+                      onChange={(e) =>
                         this.handleReactDatetimeChange("endDate", e)
                       }
                       renderDay={(props, currentDate, selectedDate) => {

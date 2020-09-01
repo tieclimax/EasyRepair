@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { Link } from "react-router-dom";
 // nodejs library that concatenates classes
@@ -34,7 +17,7 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 class Login extends React.Component {
@@ -93,7 +76,7 @@ class Login extends React.Component {
                           className="btn-neutral btn-icon"
                           color="default"
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <span className="btn-inner--icon mr-1">
                             <img
@@ -107,7 +90,7 @@ class Login extends React.Component {
                           className="btn-neutral btn-icon"
                           color="default"
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <span className="btn-inner--icon mr-1">
                             <img
@@ -126,7 +109,7 @@ class Login extends React.Component {
                       <Form role="form">
                         <FormGroup
                           className={classnames("mb-3", {
-                            focused: this.state.emailFocused
+                            focused: this.state.emailFocused,
                           })}
                         >
                           <InputGroup className="input-group-alternative">
@@ -138,10 +121,10 @@ class Login extends React.Component {
                             <Input
                               placeholder="Email"
                               type="email"
-                              onFocus={e =>
+                              onFocus={(e) =>
                                 this.setState({ emailFocused: true })
                               }
-                              onBlur={e =>
+                              onBlur={(e) =>
                                 this.setState({ emailFocused: false })
                               }
                             />
@@ -149,7 +132,7 @@ class Login extends React.Component {
                         </FormGroup>
                         <FormGroup
                           className={classnames({
-                            focused: this.state.passwordFocused
+                            focused: this.state.passwordFocused,
                           })}
                         >
                           <InputGroup className="input-group-alternative">
@@ -162,10 +145,10 @@ class Login extends React.Component {
                               placeholder="Password"
                               type="password"
                               autoComplete="off"
-                              onFocus={e =>
+                              onFocus={(e) =>
                                 this.setState({ passwordFocused: true })
                               }
-                              onBlur={e =>
+                              onBlur={(e) =>
                                 this.setState({ passwordFocused: false })
                               }
                             />

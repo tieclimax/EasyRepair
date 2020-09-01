@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 // plugin that creates slider
 import Slider from "nouislider";
@@ -25,7 +8,7 @@ class CustomControls extends React.Component {
   state = {
     simpleValue: 100.0,
     rangeLow: 200.0,
-    rangeHigh: 400.0
+    rangeHigh: 400.0,
   };
   componentDidMount() {
     // slider1 init
@@ -34,10 +17,10 @@ class CustomControls extends React.Component {
       start: [0.0],
       connect: [true, false],
       step: 0.01,
-      range: { min: 100.0, max: 500.0 }
+      range: { min: 100.0, max: 500.0 },
     }).on(
       "update",
-      function(values, handle) {
+      function (values, handle) {
         this.setState({ simpleValue: values[0] });
       }.bind(this)
     );
@@ -48,10 +31,10 @@ class CustomControls extends React.Component {
       start: [200.0, 400.0],
       connect: [false, true, false],
       step: 0.01,
-      range: { min: 100.0, max: 500.0 }
+      range: { min: 100.0, max: 500.0 },
     }).on(
       "update",
-      function(values, handle) {
+      function (values, handle) {
         this.setState({ rangeLow: values[0], rangeHigh: values[1] });
       }.bind(this)
     );
